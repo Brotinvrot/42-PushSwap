@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:29:55 by drabadan          #+#    #+#             */
-/*   Updated: 2024/10/16 11:43:34 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/10/25 14:16:47 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,9 @@ void	second_step(char **str)
 	init_stack(&a);
 	init_stack(&b);
 	fill_stack(&a, str);
-	if (if_it_sort(&a) == 1)
-		checking(&a, &b);
-	else
-	{
-		free_stack(&a);
-		free_stack(&b);
-		write (1, "OK\n", 3);
-	}
+	checking(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
 }
 
 void	first_step(int argc, char **argv)
